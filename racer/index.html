@@ -13,6 +13,7 @@
 
   <div id="racer">
     <div id="hud">
+	  <span id="settings" onclick="showSettings()"></span>
       <span id="speed" class="hud"><span id="speed_value" class="value">0</span> mph</span>
       <span id="current_lap_time" class="hud">Time: <span id="current_lap_time_value" class="value">0.0</span></span> 
       <span id="last_lap_time" class="hud">Last Lap: <span id="last_lap_time_value" class="value">0.0</span></span>
@@ -24,60 +25,62 @@
     Loading...
   </div>
 	
-  <audio id='music'>
-    <source src="music/racer.ogg">
-    <source src="music/racer.mp3">
-  </audio>
-  <span id="mute"></span>
-<table id="controls">
-    <tr><td id="fps" colspan="2" align="right"></td></tr>
-    <tr>
-      <th><label for="resolution">Resolution :</label></th>
-      <td>
-        <select id="resolution" style="width:100%">
+  
+  <div id="controls" style="display:none;">
+	  <audio id='music'>
+		<source src="music/racer.ogg">
+		<source src="music/racer.mp3">
+	  </audio>
+	  <span id="mute"></span>
+    <div><div id="fps"></div></div>
+    <div>
+      <div><label for="resolution">Resolution :</label></div>
+      <div>
+        <select id="resolution">
           <option selected value='fine'>Fine (1366x768)</option>
           <option value='high'>High (1024x768)</option>
           <option value='medium'>Medium (640x480)</option>
           <option value='low'>Low (480x360)</option>
         </select>
-      </td>
-    </tr>
-    <tr>
-      <th><label for="lanes">Lanes :</label></th>
-      <td>
+      </div>
+    </div>
+    <div>
+      <div><label for="lanes">Lanes :</label></div>
+      <div>
         <select id="lanes">
           <option>1</option>
           <option>2</option>
           <option selected>3</option>
           <option>4</option>
         </select>
-      </td>
-    </tr>
-    <tr>
-      <th><label for="roadWidth">Road Width (<span id="currentRoadWidth"></span>) :</label></th>
-      <td><input id="roadWidth" type='range' min='500' max='3000' title="integer (500-3000)"></td>
-    </tr>
-    <tr>
-      <th><label for="cameraHeight">CameraHeight (<span id="currentCameraHeight"></span>) :</label></th>
-      <td><input id="cameraHeight" type='range' min='500' max='5000' title="integer (500-5000)"></td>
-    </tr>
-    <tr>
-      <th><label for="drawDistance">Draw Distance (<span id="currentDrawDistance"></span>) :</label></th>
-      <td><input id="drawDistance" type='range' min='100' max='500' title="integer (100-500)"></td>
-    </tr>
-    <tr>
-      <th><label for="fieldOfView">Field of View (<span id="currentFieldOfView"></span>) :</label></th>
-      <td><input id="fieldOfView" type='range' min='80' max='140' title="integer (80-140)"></td>
-    </tr>
-    <tr>
-      <th><label for="fogDensity">Fog Density (<span id="currentFogDensity"></span>) :</label></th>
-      <td><input id="fogDensity" type='range' min='0' max='50' title="integer (0-50)"></td>
-    </tr>
-  </table>
-
-  <div id='instructions'>
-    <p>Use the <b>arrow keys</b> to drive the car.</p>
+      </div>
+    </div>
+    <div>
+      <div><label for="roadWidth">Road Width (<span id="currentRoadWidth"></span>) :</label></div>
+      <div><input id="roadWidth" type='range' min='500' max='3000' title="integer (500-3000)"></div>
+    </div>
+    <div>
+      <div><label for="cameraHeight">CameraHeight (<span id="currentCameraHeight"></span>) :</label></div>
+      <div><input id="cameraHeight" type='range' min='500' max='5000' title="integer (500-5000)"></div>
+    </div>
+    <div>
+      <div><label for="drawDistance">Draw Distance (<span id="currentDrawDistance"></span>) :</label></div>
+      <div><input id="drawDistance" type='range' min='100' max='500' title="integer (100-500)"></div>
+    </div>
+    <div>
+      <div><label for="fieldOfView">Field of View (<span id="currentFieldOfView"></span>) :</label></div>
+      <div><input id="fieldOfView" type='range' min='80' max='140' title="integer (80-140)"></div>
+    </div>
+    <div>
+      <div><label for="fogDensity">Fog Density (<span id="currentFogDensity"></span>) :</label></div>
+      <div><input id="fogDensity" type='range' min='0' max='50' title="integer (0-50)"></div>
+    </div>
+	<div id='instructions'>
+		<p>Use the <b>arrow keys</b> to drive the car.</p>
+	</div>
   </div>
+
+  
   <script src="stats.js"></script>
   <script src="common.js"></script>
   <script>
@@ -103,12 +106,12 @@
     var sprites        = null;                    // our spritesheet (loaded below)
     var resolution     = null;                    // scaling factor to provide resolution independence (computed)
     var roadWidth      = 2500;                    // actually half the roads width, easier math if the road spans from -roadWidth to +roadWidth
-    var segmentLength  = 400;                     // length of a single segment
+    var segmentLength  = 500;                     // length of a single segment
     var rumbleLength   = 3;                       // number of segments per red/white rumble strip
     var trackLength    = null;                    // z length of entire track (computed)
     var lanes          = 4;                       // number of lanes
     var fieldOfView    = 80;                     // angle (degrees) for field of view
-    var cameraHeight   = 1200;                    // z height of camera
+    var cameraHeight   = 1800;                    // z height of camera
     var cameraDepth    = null;                    // z distance camera is from screen (computed)
     var drawDistance   = 500;                     // number of segments to draw
     var playerX        = 0;                       // player x offset from center of road (-1 to 1 to stay independent of roadWidth)
@@ -671,6 +674,15 @@
       Dom.get('currentFieldOfView').innerHTML    = Dom.get('fieldOfView').value    = fieldOfView;
       Dom.get('currentFogDensity').innerHTML     = Dom.get('fogDensity').value     = fogDensity;
     }
+	
+	function showSettings() {
+	  var x = document.getElementById("controls");
+	  if (x.style.display === "none") {
+		x.style.display = "block";
+	  } else {
+		x.style.display = "none";
+	  }
+	}
 
     //=========================================================================
 

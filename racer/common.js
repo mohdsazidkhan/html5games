@@ -182,7 +182,7 @@ var Game = {  // a modified version of the game loop from my previous boulderdas
     Dom.get(parentId).appendChild(result.domElement);
 
     var msg = document.createElement('div');
-    msg.style.cssText = "border: 2px solid gray; padding: 5px; margin-top: 5px; text-align: left; font-size: 1.15em; text-align: right;";
+    msg.style.cssText = "padding: 5px 0px 0px;margin-top: 5px;font-size: 1.15em;text-align: left;";
     msg.innerHTML = "Your canvas performance is ";
     Dom.get(parentId).appendChild(msg);
 
@@ -208,12 +208,13 @@ var Game = {  // a modified version of the game loop from my previous boulderdas
     music.loop = true;
     music.volume = 0.05; // shhhh! annoying music!
     music.muted = (Dom.storage.muted === "true");
-    music.play();
+	//music.play();
     Dom.toggleClassName('mute', 'on', music.muted);
     Dom.on('mute', 'click', function() {
       Dom.storage.muted = music.muted = !music.muted;
       Dom.toggleClassName('mute', 'on', music.muted);
     });
+	
   }
 
 }
