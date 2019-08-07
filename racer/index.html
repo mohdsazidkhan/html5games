@@ -13,6 +13,8 @@
 
   <div id="racer">
     <div id="hud">
+	  <span id="openfullscreen" onclick="openFullscreen()"></span>
+	  <span id="closefullscreen" onclick="closeFullscreen()" style="display:none;"></span>
 	  <span id="settings" onclick="showSettings()"></span>
       <span id="speed" class="hud"><span id="speed_value" class="value">0</span> mph</span>
       <span id="current_lap_time" class="hud">Time: <span id="current_lap_time_value" class="value">0.0</span></span> 
@@ -683,10 +685,57 @@
 		x.style.display = "none";
 	  }
 	}
+	
+	/* Get the documentElement (<html>) to display the page in fullscreen */
+	var elem = document.documentElement;
 
-    //=========================================================================
+	/* View in fullscreen */
+	function openFullscreen() {
+	  var open = document.getElementById("closefullscreen");
+	  var close = document.getElementById("openfullscreen");
+	  if (elem.requestFullscreen) {
+		elem.requestFullscreen();
+		open.style.display = "block";
+		close.style.display = "none";
+	  } else if (elem.mozRequestFullScreen) { /* Firefox */
+		elem.mozRequestFullScreen();
+		open.style.display = "block";
+		close.style.display = "none";
+	  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+		elem.webkitRequestFullscreen();
+		open.style.display = "block";
+		close.style.display = "none";
+	  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+		elem.msRequestFullscreen();
+		open.style.display = "block";
+		close.style.display = "none";
+	  }
+	}
 
-  </script>
+	/* Close fullscreen */
+	function closeFullscreen() {
+	  var open = document.getElementById("closefullscreen");
+	  var close = document.getElementById("openfullscreen");
+	  if (document.exitFullscreen) {
+		document.exitFullscreen();
+		close.style.display = "block";
+		open.style.display = "none";
+	  } else if (document.mozCancelFullScreen) { /* Firefox */
+		document.mozCancelFullScreen();
+		close.style.display = "block";
+		open.style.display = "none";
+	  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+		document.webkitExitFullscreen();
+		close.style.display = "block";
+		open.style.display = "none";
+	  } else if (document.msExitFullscreen) { /* IE/Edge */
+		document.msExitFullscreen();
+		close.style.display = "block";
+		open.style.display = "none";
+	  }
+	}
+</script>
+
 
 </body> 
 </html>
