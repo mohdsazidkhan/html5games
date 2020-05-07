@@ -4170,8 +4170,8 @@ instobj.loop=looping;instobj.volume=vol*masterVolume;if(instobj.currentTime!==se
 {try{instobj.currentTime=seekPos;}
 catch(err)
 {;}}
-if(this.is_music&&isMusicWorkaround&&!audRuntime.isInUserInputEvent)
-musicPlayNextTouch.push(this);else
+if(this.is_music&&isMusicWorkaround&&!audRuntime.isInUserInputEvent){
+musicPlayNextTouch.push(this);}else{
 instobj.play();}
 break;case API_CORDOVA:if((!this.fresh&&this.stopped)||seekPos!==0)
 instobj["seekTo"](seekPos);instobj["play"]();this.hasPlaybackEnded=false;break;case API_APPMOBI:if(audRuntime.isDirectCanvas)
