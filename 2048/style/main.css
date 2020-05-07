@@ -510,15 +510,6 @@ hr {
 	font-size: 45px;
 }
 
-@media screen and (max-width: 768px) {
-	.desktop_explain{
-		display:none;
-	}
-	.mobile_explain{
-		display:block;
-	}
-}
-
 @media screen and (max-width: 520px) {
 	.tile.tile-512 .tile-inner {
 		font-size: 25px;
@@ -741,13 +732,16 @@ hr {
 .mobile_exp{
 	display:none;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 768px) {
 	.desktop_exp{
 		display:none;
 	}
 	.mobile_exp{
 		display:block;
 	}
+}
+@media screen and (max-width: 520px) {
+
 	html,
 	body {
 		font-size: 15px;
