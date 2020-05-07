@@ -735,13 +735,19 @@ hr {
 	color: #fff;
 	font-size: 17px;
 }
-.desktop_explain{
+.desktop_exp{
 	display:block;
 }
-.mobile_explain{
+.mobile_exp{
 	display:none;
 }
 @media screen and (max-width: 520px) {
+	.desktop_exp{
+		display:none;
+	}
+	.mobile_exp{
+		display:block;
+	}
 	html,
 	body {
 		font-size: 15px;
