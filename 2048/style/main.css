@@ -727,7 +727,7 @@ hr {
 	font-size: 17px;
 }
 .desktop_exp{
-	display:block;
+	display:inline-block;
 }
 .mobile_exp{
 	display:none;
@@ -737,7 +737,7 @@ hr {
 		display:none;
 	}
 	.mobile_exp{
-		display:block;
+		display:inline-block;
 	}
 }
 @media screen and (max-width: 520px) {
