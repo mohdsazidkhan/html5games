@@ -9,7 +9,7 @@ var SPRITES = {
   BILLBOARD01:            { x:  625, y:  375, w:  300, h:  170 },
   BILLBOARD06:            { x:  488, y:  555, w:  298, h:  190 },
   BILLBOARD05:            { x:    5, y:  897, w:  298, h:  190 },
-  BILLBOARD07:            { x:  313, y:  897, w:  298, h:  190 },
+  BILLBOARD07:            { x:  513, y:  500, w:  298, h:  190 },
   BOULDER2:               { x:  621, y:  897, w:  298, h:  140 },
   TREE2:                  { x: 1205, y:    5, w:  282, h:  295 },
   BILLBOARD04:            { x: 1205, y:  310, w:  268, h:  170 },
