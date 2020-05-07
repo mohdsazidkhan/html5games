@@ -4055,7 +4055,7 @@ this.bufferObject.autoplay=false;this.bufferObject.preload="auto";this.bufferObj
 {self.failedToLoad=true;});}
 else
 {request=new XMLHttpRequest();request.open("GET",src_,true);request.responseType="arraybuffer";request.onload=function(){self.audioData=request.response;self.decodeAudioBuffer();};request.onerror=function(){self.failedToLoad=true;};request.send();}
-break;case API_CORDOVA:this.bufferObject=true;break;case API_APPMOBI:this.bufferObject=true;break;}};C2AudioBuffer.prototype.release=function()
+break;case API_APPMOBI:this.bufferObject=true;break;}};C2AudioBuffer.prototype.release=function()
 {var i,len,j,a;for(i=0,j=0,len=audioInstances.length;i<len;++i)
 {a=audioInstances[i];audioInstances[j]=a;if(a.buffer===this)
 a.stop();else
@@ -4170,8 +4170,8 @@ instobj.loop=looping;instobj.volume=vol*masterVolume;if(instobj.currentTime!==se
 {try{instobj.currentTime=seekPos;}
 catch(err)
 {;}}
-if(this.is_music&&isMusicWorkaround&&!audRuntime.isInUserInputEvent){
-musicPlayNextTouch.push(this);}else{
+if(this.is_music&&isMusicWorkaround&&!audRuntime.isInUserInputEvent)
+musicPlayNextTouch.push(this);else
 instobj.play();}
 break;case API_CORDOVA:if((!this.fresh&&this.stopped)||seekPos!==0)
 instobj["seekTo"](seekPos);instobj["play"]();this.hasPlaybackEnded=false;break;case API_APPMOBI:if(audRuntime.isDirectCanvas)
