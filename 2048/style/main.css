@@ -69,7 +69,7 @@ h1.title {
 .best-container {
 	position: relative;
 	display: inline-block;
-	background: rgba(57, 29, 9, 0.85);
+	background: rgba(4, 2, 0, 0.7);
 	padding: 15px 25px;
 	font-size: 25px;
 	height: 25px;
@@ -440,44 +440,38 @@ hr {
 }
 
 .tile.tile-4 .tile-inner {
-	background: #eee4da;
+	background: #008b8b;
 	color: #fff;
-	background-image: linear-gradient( 89.8deg, rgba(195,67,129,1) 11%, rgba(90,43,186,1) 83.4% );
 	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 
 .tile.tile-8 .tile-inner {
 	color: #fff;
-	background: #f2b179;
-	background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(3,235,255,1) 0%, rgba(152,70,242,1) 100.2% );
+	background: #4a00e0;
 	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 
 .tile.tile-16 .tile-inner {
 	color: #fff;
-	background: #f59563;
-	background-image: linear-gradient( 75.3deg,  rgba(222,0,0,1) -0.3%, rgba(240,243,0,1) 100.2% );
+	background: #004fff;
 	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 
 .tile.tile-32 .tile-inner {
 	color: #fff;
-	background: #f59563;
-	background-image: linear-gradient( 111.2deg,  rgba(230,248,13,1) 0.9%, rgba(128,248,13,1) 52.5%, rgba(103,205,4,1) 78.2%, rgba(44,151,13,1) 99.2% );
+	background: #e22daa;
 	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 
 .tile.tile-64 .tile-inner {
 	color: #fff;
-	background: #f59563;
-	background-image: radial-gradient( circle farthest-corner at 100.6% 51.9%,  rgb(189, 167, 8) 0%, rgba(26,149,77,1) 90% );
+	background: #e44e00;
 	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 
 .tile.tile-128 .tile-inner {
 	color: #fff;
-	background: #edcf72;
-	background-image: linear-gradient( 70.6deg,  rgba(172,30,255,1) 0.3%, rgba(65,35,251,1) 55.8%, rgba(35,251,224,1) 105.1% );
+	background: #5aaf24;
 	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
 	font-size: 45px;
 }
@@ -490,8 +484,7 @@ hr {
 
 .tile.tile-256 .tile-inner {
 	color: #fff;
-	background: #edcc61;
-	background-image: linear-gradient( 84.4deg,  rgba(17,0,220,1) -5.1%, rgba(214,32,0,1) 41.6%, rgba(237,152,0,1) 69%, rgba(255,171,6,1) 81.9%, rgba(253,251,0,1) 99.7% );
+	background: #a5920d;
 	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
 	font-size: 45px;
 }
@@ -504,8 +497,7 @@ hr {
 
 .tile.tile-512 .tile-inner {
 	color: #fff;
-	background: #edc850;
-	background-image: linear-gradient( 109.6deg,  rgba(8,8,247,0.91) 12.7%, rgba(250,5,5,0.91) 92.2% );
+	background: #80320e;
 	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
 	font-size: 45px;
 }
@@ -518,8 +510,7 @@ hr {
 
 .tile.tile-1024 .tile-inner {
 	color: #fff;
-	background: #edc53f;
-	background-image: linear-gradient( 179.3deg,  rgba(233,10,130,1) -0.1%, rgba(12,21,139,1) 96.7% );
+	background: #776e65;
 	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
 	font-size: 35px;
 }
@@ -534,7 +525,7 @@ hr {
 .tile.tile-2048 .tile-inner {
 	color: #fff;
 	background: #edc22e;
-	background-image: linear-gradient( 137.9deg,  rgba(78,156,226,1) 7.8%, rgba(62,146,69,1) 16%, rgba(251,220,23,1) 32.7%, rgba(242,160,35,1) 50.4%, rgba(253,12,12,1) 71.5%, rgba(192,26,129,1) 83.1% );
+	background-image: linear-gradient(to right, rgb(142, 45, 226), rgb(74, 0, 224));
 	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
 	font-size: 35px;
 }
@@ -792,7 +783,7 @@ hr {
 		-ms-user-select: none;
 		-ms-touch-action: none;
 		touch-action: none;
-		background: #bbada0;
+		background: #fff;
 		border-radius: 6px;
 		width: 280px;
 		height: 280px;
@@ -807,7 +798,7 @@ hr {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background: rgba(238, 228, 218, 0.5);
+		background: rgba(0, 0, 0, 0.7);
 		z-index: 100;
 		text-align: center;
 		-webkit-animation: fade-in 800ms ease 1200ms;
@@ -822,6 +813,7 @@ hr {
 		font-weight: bold;
 		height: 60px;
 		line-height: 60px;
+		color: #fff;
 		margin-top: 222px;
 	}
 	.game-container .game-message .lower {
@@ -830,11 +822,11 @@ hr {
 	}
 	.game-container .game-message a {
 		display: inline-block;
-		background: #8f7a66;
+		background: #ffffff;
 		border-radius: 3px;
 		padding: 0 20px;
 		text-decoration: none;
-		color: #f9f6f2;
+		color: #000000;
 		height: 40px;
 		line-height: 42px;
 		margin-left: 9px;
@@ -874,7 +866,7 @@ hr {
 		margin-right: 10px;
 		float: left;
 		border-radius: 3px;
-		background: rgba(238, 228, 218, 0.35);
+		background: rgb(232, 232, 232);
 	}
 	.grid-cell:last-child {
 		margin-right: 0;
