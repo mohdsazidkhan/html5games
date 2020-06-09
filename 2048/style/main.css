@@ -3,7 +3,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	color: #776e65;
+	color: #ffffff;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 }
@@ -91,7 +91,7 @@ h1.title {
 	font-size: 13px;
 	line-height: 13px;
 	text-align: center;
-	color: #eee4da;
+	color: #ffffff;
 }
 
 .score-container .score-addition,
@@ -704,7 +704,7 @@ hr {
 	border-radius: 3px;
 	padding: 0 20px;
 	text-decoration: none;
-	color: #f9f6f2;
+	color: #fff;
 	height: 40px;
 	line-height: 42px;
 	display: block;
@@ -738,12 +738,12 @@ hr {
 		font-size: 15px;
 	}
 	body {
-		margin: 20px 0;
-		padding: 0 20px;
+		margin: 10px 0;
+        padding: 0;
 	}
 	h1.title {
-		font-size: 27px;
-		margin-top: 15px;
+		font-size: 40px;
+        margin-top: 0;
 	}
 	.container {
 		width: 280px;
@@ -784,6 +784,7 @@ hr {
 		-ms-touch-action: none;
 		touch-action: none;
 		background: #fff;
+		box-shadow: 0 0 100px 0 rgb(0, 0, 0);
 		border-radius: 6px;
 		width: 280px;
 		height: 280px;
@@ -867,6 +868,7 @@ hr {
 		float: left;
 		border-radius: 3px;
 		background: rgb(232, 232, 232);
+		box-shadow: 0 0 5px 0 rgb(0, 0, 0);
 	}
 	.grid-cell:last-child {
 		margin-right: 0;
